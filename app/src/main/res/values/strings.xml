@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KDMPR1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="disease_arrays">
+    <item>A, Hemophilia (Hemophilia)</item>
+    <item>A, Hepatitis (Hepatitis A)</item>
+    <item>AAA (Abdominal Aortic Aneurysm)</item>
+    <item>AAT (Alpha 1 Antitrypsin Deficiency)</item>
+    <item>AATD (Alpha 1 Antitrypsin Deficiency)</item>
+    <item>Abdominal Adhesions (Scar Tissue)</item>
+    <item>Abdominal Aortic Aneurysm</item>
+        <item>Abdominal Migraines in Children and Adults</item>
+        <item>Abdominal Pain (Causes, Remedies, Treatment)</item>
+        <item>Abdominoplasty (Tummy Tuck ( Abdominoplasty))</item>
+        <item>Ablation Therapy for Arrhythmias</item>
+        <item>Ablation, Endometrial (Endometrial Ablation)</item>
+        <item>Ablation, Uterus (Endometrial Ablation)</item>
+        <item>Abnormal Heart Rhythms (Heart Rhythm Disorders)</item>
+        <item>Abnormal Vagnial Bleeding (Vaginal Bleeding)</item>
+        <item>Abrasion (Cuts, Scrapes and Puncture Wounds)</item>
+        <item>Absence of Menstrual Periods (Amenorrhea)</item>
+        <item>Achalasia</item>
+        <item>NAUSEA</item>
+        <item>Aches, Pain, Fever</item>
+    </string-array>
+</resources>

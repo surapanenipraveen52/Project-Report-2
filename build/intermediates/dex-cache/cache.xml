@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\json-simple-1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\json-simple-1.1-32aebe89b813d95a6bd9408340b3e746c5f1891b.jar" />
+    </item>
+
+</items>

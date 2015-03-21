@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:spinnerMode="dialog"
+        android:entries="@array/disease_arrays"
+        android:id="@+id/spinner2"
+        android:layout_above="@+id/add"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_alignParentStart="true">
+
+    </Spinner>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:id="@+id/editText"
+        android:layout_below="@+id/spinner2"
+         />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pros:"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/transparent"
+        android:textSize="34sp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="34sp"
+        android:text="Cons:"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/percent"
+        android:layout_alignEnd="@+id/percent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="118dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="60%"
+        android:textColor="@android:color/holo_red_dark"
+        android:background="@android:color/transparent"
+        android:id="@+id/percent"
+        android:textSize="75sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Cerebral Haemorrhage\nStomach Ulcer\nAnaemia"
+        android:id="@+id/textView"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Prevents Ischaemic* Stroke\n Prevent Demintia\nHeart Attack\n Prevent type of Cancer"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Search"
+        android:id="@+id/search"
+        android:layout_below="@+id/editText"
+        android:layout_alignEnd="@+id/percent" />
+</RelativeLayout>
