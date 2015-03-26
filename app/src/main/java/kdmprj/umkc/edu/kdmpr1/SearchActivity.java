@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -38,13 +39,17 @@ public class SearchActivity extends Activity {
     private static final String TAG ="SearchActivity" ;
     String item;
      TextView percent;
+    private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.searchactivity);
         final EditText drug=(EditText)findViewById(R.id.editText);
         TextView textView = (TextView)findViewById(R.id.search);
-         percent = (TextView)findViewById(R.id.percent);
+//         percent = (TextView)findViewById(R.id.percent);
+        listView = (ListView)findViewById(R.id.resList);
+
 
         Spinner spinner= (Spinner)findViewById(R.id.spinner2);
 //        final TextView textView=(TextView)findViewById(R.id.textView);
@@ -52,7 +57,7 @@ public class SearchActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG,"search onclick");
-                new AnalyzeUserInputs(item, drug.getText().toString(),SearchActivity.this,percent).execute();
+                new AnalyzeUserInputs(item, drug.getText().toString(),SearchActivity.this,percent,listView).execute();
             }
         });
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

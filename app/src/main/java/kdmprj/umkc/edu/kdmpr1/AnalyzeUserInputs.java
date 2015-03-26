@@ -1,9 +1,12 @@
 package kdmprj.umkc.edu.kdmpr1;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import org.json.simple.JSONArray;
 import org.json.JSONException;
@@ -25,16 +28,28 @@ import kdmprj.umkc.edu.kdmpr1.diseases.GetHealthConditions;
  */
 public class AnalyzeUserInputs extends AsyncTask{
     private static final String TAG = "AnalyzeUserInputs";
+    private final ListView lv;
+    ProgressDialog pd;
     Context mContext;
     String drugname;
-    TextView percentTextView;
+//    TextView percentTextView;
     int perce;
     Map<String,Integer> medsMap= new HashMap<String, Integer>();
-    public AnalyzeUserInputs(String s, String drugName, Context context, TextView percent) {
+    public AnalyzeUserInputs(String s, String drugName, Context context, TextView percent, ListView listView) {
         Log.v(TAG,"AnalyzeUserInputs Constructor");
         drugname=drugName;
         mContext=context;
-        percentTextView=percent;
+//        percentTextView=percent;
+        lv=listView;
+        pd=new ProgressDialog(context);
+    pd.setMessage("Fetching Medicine");
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        pd.show();
+
     }
 
     @Override
@@ -80,7 +95,10 @@ public class AnalyzeUserInputs extends AsyncTask{
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
         Log.v(TAG,"perc = "+perce);
-        percentTextView.setText(""+perce);
-
+//        percentTextView.setText(""+perce);
+        lv.setAdapter(new Myadapter(medsMap));
+        View v= (View) lv.getParent();
+        v.findViewById(R.id.suggestion).setVisibility(View.VISIBLE);
+    pd.dismiss();
     }
 }

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,10 +21,12 @@ import android.widget.Toast;
 import kdmprj.umkc.edu.kdmpr1.diseases.GetDiseases;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements TextToSpeech.OnInitListener{
 
     private static final String TAG = "MainActivity";
     private FeedReaderDbHelper mDbHelper;
+    TextToSpeech tts;
+
 
     private ListView ls;
     private CustomAdapter customAdapter;
@@ -32,12 +35,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tts = new TextToSpeech(getApplicationContext(),this);
+
         Spinner spinner= (Spinner)findViewById(R.id.spinner);
         ls= (ListView)findViewById(R.id.listView);
         Button add= (Button)findViewById(R.id.add);
         Button done= (Button)findViewById(R.id.done);
         Button delete= (Button)findViewById(R.id.delete);
         mDbHelper = new FeedReaderDbHelper(getApplicationContext());
+        tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_FLUSH,null);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +104,7 @@ public class MainActivity extends Activity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_FLUSH,null);
 
                 Intent i = new Intent(getApplicationContext(),SearchActivity.class);
                 startActivity(i);
@@ -127,6 +134,8 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
+    @Override
+    public void onInit(int status) {
+        tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_FLUSH,null);
+    }
 }
