@@ -26,4 +26,5 @@
         <item>NAUSEA</item>
         <item>Aches, Pain, Fever</item>
     </string-array>
+    <string name="title_activity_speech_to_text">SpeechToText</string>
 </resources>

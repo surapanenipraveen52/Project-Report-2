@@ -18,12 +18,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 import kdmprj.umkc.edu.kdmpr1.diseases.GetDiseases;
+import kdmprj.umkc.edu.kdmpr1.speechtotext.SpeechToText;
+import kdmprj.umkc.edu.kdmpr1.speechtotext.VoicetoText;
 
 
 public class MainActivity extends Activity implements TextToSpeech.OnInitListener{
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MAinActivity";
     private FeedReaderDbHelper mDbHelper;
     TextToSpeech tts;
 
@@ -104,7 +108,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_FLUSH,null);
+                tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_ADD,null);
 
                 Intent i = new Intent(getApplicationContext(),SearchActivity.class);
                 startActivity(i);
@@ -136,6 +140,13 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
     @Override
     public void onInit(int status) {
-        tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_FLUSH,null);
+       //tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_ADD,null);
+       // Intent mTutorial = new Intent(MainActivity.this, SpeechToText.class);
+        //this.startActivity(mTutorial);
+       // VoicetoText vt= new VoicetoText(MainActivity.this);
+        //vt.voiceToText();
+    }
+    public void analyzeVoiceResults(List<String> voiceResults){
+        Log.v(TAG,voiceResults.toString());
     }
 }

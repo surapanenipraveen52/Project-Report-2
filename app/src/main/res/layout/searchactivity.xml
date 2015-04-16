@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F7F9"
     android:id="@+id/root">
     <Spinner
         android:layout_width="fill_parent"
@@ -10,7 +11,6 @@
         android:entries="@array/disease_arrays"
         android:id="@+id/spinner2"
         android:layout_above="@+id/add"
-        android:background="@android:color/holo_orange_dark"
         android:layout_alignParentStart="true">
 
     </Spinner>
@@ -28,10 +28,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/resList"
-        android:paddingLeft="2dp"
-        android:background="@android:color/black"
-        android:paddingRight="3dp"
-
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
         android:layout_below="@+id/suggestion" />
 
     <TextView
@@ -45,13 +43,12 @@
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="25dp"
-        android:background="#98AFC7"
+        android:layout_height="45dp"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
-
+        android:textSize="32sp"
+        android:fontFamily="Segoe UI"
         android:text="Sugesstions"
-        android:textColor="@android:color/holo_red_dark"
         android:id="@+id/suggestion"
         android:visibility="invisible"
         android:layout_below="@+id/editText"
