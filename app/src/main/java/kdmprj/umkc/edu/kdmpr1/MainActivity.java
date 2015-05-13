@@ -1,5 +1,6 @@
 package kdmprj.umkc.edu.kdmpr1;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -30,8 +31,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private static final String TAG = "MAinActivity";
     private FeedReaderDbHelper mDbHelper;
     TextToSpeech tts;
-
-
     private ListView ls;
     private CustomAdapter customAdapter;
 
@@ -47,7 +46,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         Button done= (Button)findViewById(R.id.done);
         Button delete= (Button)findViewById(R.id.delete);
         mDbHelper = new FeedReaderDbHelper(getApplicationContext());
-        tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_FLUSH,null);
+        tts.speak("Welcome to Drug Analyser",TextToSpeech.QUEUE_FLUSH,null);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,16 +101,14 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tts.speak("Welcome to MobileDoc",TextToSpeech.QUEUE_ADD,null);
-
                 Intent i = new Intent(getApplicationContext(),SearchActivity.class);
                 startActivity(i);
+
             }
         });
     }

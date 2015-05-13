@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kdmprj.umkc.edu.kdmpr1.MainActivity;
+import kdmprj.umkc.edu.kdmpr1.SearchActivity;
 
 /**
  * Created by praveen on 4/8/2015.
@@ -30,8 +31,8 @@ public class VoicetoText  implements
     private String LOG_TAG = "VoiceRecognitionActivity";
     private List<String> resultsList= new ArrayList<String>();
     public static boolean isCompleted=false;
-    public VoicetoText(Context mainActivity) {
-        mContext=mainActivity;
+    public VoicetoText(Context Context) {
+        mContext=Context;
     }
 
     public List<String> voiceToText() {
@@ -114,8 +115,8 @@ public class VoicetoText  implements
             Log.v(LOG_TAG, "Text is : " + text);
         }
         isCompleted = true;
-        if(mContext instanceof  MainActivity) {
-            MainActivity main = (MainActivity) mContext;
+        if(mContext instanceof SearchActivity) {
+            SearchActivity main = (SearchActivity) mContext;
             main.analyzeVoiceResults(matches);
         }
     }

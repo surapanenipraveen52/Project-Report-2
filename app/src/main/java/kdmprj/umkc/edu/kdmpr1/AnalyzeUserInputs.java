@@ -55,13 +55,14 @@ public class AnalyzeUserInputs extends AsyncTask{
     @Override
     protected Object doInBackground(Object[] params) {
         try {
-            List<String> medsList= new GetMeds().getMeds("condition/bronchitis.html");
+            List<String> medsList= new GetMeds().getMeds("condition/backache.html");
             if(!(null !=drugname || drugname.length()==0))
             {
                 if (!medsList.contains(drugname))
                 medsList.add(drugname);
             }
-            for (String oneMed : medsList) {
+            for (int j =0 ; j<medsList.size() ; j++) {
+                String oneMed = medsList.get(j);
                 String json_hc = new GetHealthConditions().getHealthConditions(oneMed);
                 if(json_hc.contains("error") ){
                     if( json_hc.contains("no data")){
@@ -80,7 +81,10 @@ public class AnalyzeUserInputs extends AsyncTask{
                     healthConditionsArray.add((String) oneCondition.get("term"));
                 }
                 int effectiveness = new GetDiseases(mContext).getEffectivePercent(healthConditionsArray);
-                medsMap.put(oneMed,effectiveness);
+                if(effectiveness >0) {
+                    effectiveness = effectiveness -(j*3);
+                    medsMap.put(oneMed, effectiveness);
+                }
 
             }
             Log.v(TAG," meds map"+medsMap.toString());

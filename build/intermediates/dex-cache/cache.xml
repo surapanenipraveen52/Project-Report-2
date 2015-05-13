@@ -8,5 +8,47 @@
         sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
         <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\json-simple-1.1-32aebe89b813d95a6bd9408340b3e746c5f1891b.jar" />
     </item>
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\opennlp-uima-1.5.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3a55d8023d1de340193899250b1fd872f751051c">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\opennlp-uima-1.5.3-72361e653a7773ed18c06b221cf77a012da58b70.jar" />
+    </item>
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\jwnl-1.3.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7108e5b6a8875fe0488d942238575407c7ab8649">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\jwnl-1.3.3-b7270ffab9b1821e3c24886bf6be9646b0e38b0d.jar" />
+    </item>
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\opennlp-maxent-3.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="55e39e6b46e71f35229cdd6950e72d8cce3b5fd4">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\opennlp-maxent-3.0.3-bacaeb17ead7d290d912f1addd305e025028a7c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\core.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f34b05fa8627c0a8ce50158798b3e2df4a910e4c">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\core-5aafa5ef5d30571c346f7d405d7f8fdf3738a96c.jar" />
+    </item>
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\opennlp-tools-1.5.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="826d34168b0e4870c9f599ed7f2b8fee4194ba3b">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\opennlp-tools-1.5.3-fa994ee6a6e5688a24f0082a6b2f5747942f5465.jar" />
+    </item>
+    <item
+        jar="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\libs\ritaWN.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="613710d715fcb049932941797196f1005cf94d27">
+        <dex dex="C:\Users\praveen\AndroidStudioProjects\ProjectReport1-master\app\build\intermediates\pre-dexed\debug\ritaWN-4a4b3a90742196569186e2ee526b8e9aac23cf3c.jar" />
+    </item>
 
 </items>
